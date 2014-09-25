@@ -214,5 +214,5 @@ def list_workers():
 
 @dashboard.context_processor
 def inject_interval():
-    interval = current_app.config.get('RQ_POLL_INTERVAL', 2500)
+    interval = current_app.config.get('RQ_POLL_INTERVAL', 10000)
     return dict(poll_interval=interval)
